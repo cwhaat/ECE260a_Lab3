@@ -24,4 +24,4 @@ Carry Save Adder (provided by Prof. Eldon)
 fir4c_fig11_42.sv
 fir4c_fig11_42.out.v
 
-The Reports folder contain reports of all the for the designs.
+The Reports folder contains reports of all design implementations. 
