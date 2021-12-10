@@ -16,6 +16,10 @@ Transpose FIR filter with behavioral adder :
 fir4_transpose.out.v
 fir4_transpose.sv
 
-Vanilla ripple carry adder (provided by Prof. Eldon)
+Ripple Carry Adder (provided by Prof. Eldon)
 fir4rca.out.v
 fir4rca.sv 
+
+Carry Save Adder (provided by Prof. Eldon)
+
+
