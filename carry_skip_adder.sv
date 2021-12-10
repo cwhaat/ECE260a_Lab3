@@ -1,5 +1,5 @@
 
-module carry_skip_gen(Y,carryout,A,B,carryin);
+module carry_skip_block(Y,carryout,A,B,carryin);
   output [3:0]Y;
   output carryout;
   input [3:0]A,B;
@@ -32,12 +32,12 @@ module carry_skip(Y,carryout,A,B,carryin);
   input [15:0]A,B;
   input carryin;
 
-  wire c4,c8,c12; // intermediate carry obtained from first block
+  wire c4,c8,c12;
   
-  carry_skip_gen b1 (Y[3:0],c4,A[3:0],B[3:0],carryin);
-  carry_skip_gen b2 (Y[7:4],c8,A[7:4],B[7:4],c4); // pass the intermediate carry here
-  carry_skip_gen b3 (Y[11:8],c12,A[11:8],B[11:8],c8);
-  carry_skip_gen b4 (Y[15:12],carryout,A[15:12],B[15:12],c12);
+  carry_skip_block b1 (Y[3:0],c4,A[3:0],B[3:0],carryin);
+  carry_skip_block b2 (Y[7:4],c8,A[7:4],B[7:4],c4); // pass the intermediate carry here
+  carry_skip_block b3 (Y[11:8],c12,A[11:8],B[11:8],c8);
+  carry_skip_block b4 (Y[15:12],carryout,A[15:12],B[15:12],c12);
   
 endmodule
 
